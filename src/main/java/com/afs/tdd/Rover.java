@@ -33,6 +33,9 @@ public class Rover {
             case "S":
                 this.locationY -= 1;
                 break;
+            case "E":
+                this.locationX += 1;
+                break;
         }
     }
 
