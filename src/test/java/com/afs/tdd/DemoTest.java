@@ -78,7 +78,7 @@ class DemoTest {
     @Test
     public void should_E_when_controlRover_given_0_0_S_and_L() {
         // given
-        Rover rover = new Rover(0, 0, "N");
+        Rover rover = new Rover(0, 0, "S");
 
         // when execute
         rover.controlRover("L");
