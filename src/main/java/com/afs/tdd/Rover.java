@@ -59,15 +59,24 @@ public class Rover {
         }
     }
 
+    private void turnRight() {
+        switch (this.direction) {
+            case "N":
+                this.direction = "E";
+                break;
+        }
+    }
+
     private void handleInstruction(String instruction) {
         switch (instruction) {
             case "M":
                 this.moveForward();
                 break;
-
             case "L":
                 this.turnLeft();
                 break;
+            case "R":
+                this.turnRight();
         }
     }
 
