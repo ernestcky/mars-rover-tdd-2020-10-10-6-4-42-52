@@ -47,5 +47,20 @@ class DemoTest {
         assertEquals("E", rover.getDirection());
     }
 
+    @Test
+    public void should_return_x_minus_1_when_controlRover_given_0_0_W_and_M() {
+        // given
+        Rover rover = new Rover(0, 0, "W");
+
+        // when execute
+        rover.controlRover("M");
+
+        // then
+        assertEquals(-1, rover.getLocationX());
+        assertEquals(0, rover.getLocationY());
+        assertEquals("E", rover.getDirection());
+    }
+
+
     
 }
