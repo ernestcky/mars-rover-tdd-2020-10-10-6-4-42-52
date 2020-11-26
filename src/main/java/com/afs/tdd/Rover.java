@@ -25,8 +25,27 @@ public class Rover {
         return direction;
     }
 
+    private void moveForward() {
+        switch(this.direction) {
+            case "N":
+                this.locationY += 1;
+                break;
+            case "S":
+                this.locationY -= 1;
+                break;
+        }
+    }
+
+    private void handleInstruction(String instruction) {
+        switch (instruction) {
+            case "M":
+                this.moveForward();
+                break;
+        }
+    }
+
     public void controlRover(String instruction) {
-        this.locationY = this.locationY + 1;
+        Arrays.asList(instruction.split("")).forEach(this::handleInstruction);
     }
 
 }
