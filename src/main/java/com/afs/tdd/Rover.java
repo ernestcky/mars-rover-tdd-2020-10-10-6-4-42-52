@@ -70,6 +70,9 @@ public class Rover {
             case "W":
                 this.direction = "N";
                 break;
+            case "E":
+                this.direction = "S";
+                break;
         }
     }
 
