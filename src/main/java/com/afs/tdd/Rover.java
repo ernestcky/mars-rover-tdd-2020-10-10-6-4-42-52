@@ -26,7 +26,7 @@ public class Rover {
     }
 
     public void controlRover(String instruction) {
-
+        this.locationY = this.locationY + 1;
     }
 
 }
