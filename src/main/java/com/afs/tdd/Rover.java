@@ -42,10 +42,22 @@ public class Rover {
         }
     }
 
+    private void turnLeft() {
+        switch (this.direction) {
+            case "N":
+                this.direction = "W";
+                break;
+        }
+    }
+
     private void handleInstruction(String instruction) {
         switch (instruction) {
             case "M":
                 this.moveForward();
+                break;
+
+            case "L":
+                this.turnLeft();
                 break;
         }
     }
