@@ -131,6 +131,20 @@ class DemoTest {
         assertEquals("E", rover.getDirection());
     }
 
+    @Test
+    public void should_W_when_controlRover_given_0_0_S_and_R() {
+        // given
+        Rover rover = new Rover(0, 0, "S");
+
+        // when execute
+        rover.controlRover("R");
+
+        // then
+        assertEquals(0, rover.getLocationX());
+        assertEquals(0, rover.getLocationY());
+        assertEquals("W", rover.getDirection());
+    }
+
 
 
 
