@@ -3,6 +3,13 @@ package com.afs.tdd;
 import java.util.Arrays;
 
 public class Rover {
+    public static final String NORTH = "N";
+    public static final String SOUTH = "S";
+    public static final String EAST = "E";
+    public static final String WEST = "W";
+    public static final String MOVE = "M";
+    public static final String LEFT = "L";
+    public static final String RIGHT = "R";
     private Integer locationX;
     private Integer locationY;
     private String direction;
@@ -14,29 +21,29 @@ public class Rover {
     }
 
     public Integer getLocationX() {
-        return locationX;
+        return this.locationX;
     }
 
     public Integer getLocationY() {
-        return locationY;
+        return this.locationY;
     }
 
     public String getDirection() {
-        return direction;
+        return this.direction;
     }
 
     private void moveForward() {
-        switch(this.direction) {
-            case "N":
+        switch (this.direction) {
+            case NORTH:
                 this.locationY += 1;
                 break;
-            case "S":
+            case SOUTH:
                 this.locationY -= 1;
                 break;
-            case "E":
+            case EAST:
                 this.locationX += 1;
                 break;
-            case "W":
+            case WEST:
                 this.locationX -= 1;
                 break;
         }
@@ -44,47 +51,47 @@ public class Rover {
 
     private void turnLeft() {
         switch (this.direction) {
-            case "N":
-                this.direction = "W";
+            case NORTH:
+                this.direction = WEST;
                 break;
-            case "S":
-                this.direction = "E";
+            case SOUTH:
+                this.direction = EAST;
                 break;
-            case "W":
-                this.direction = "S";
+            case WEST:
+                this.direction = SOUTH;
                 break;
-            case "E":
-                this.direction = "N";
+            case EAST:
+                this.direction = NORTH;
                 break;
         }
     }
 
     private void turnRight() {
         switch (this.direction) {
-            case "N":
-                this.direction = "E";
+            case NORTH:
+                this.direction = EAST;
                 break;
-            case "S":
-                this.direction = "W";
+            case SOUTH:
+                this.direction = WEST;
                 break;
-            case "W":
-                this.direction = "N";
+            case WEST:
+                this.direction = NORTH;
                 break;
-            case "E":
-                this.direction = "S";
+            case EAST:
+                this.direction = SOUTH;
                 break;
         }
     }
 
     private void handleInstruction(String instruction) {
         switch (instruction) {
-            case "M":
+            case MOVE:
                 this.moveForward();
                 break;
-            case "L":
+            case LEFT:
                 this.turnLeft();
                 break;
-            case "R":
+            case RIGHT:
                 this.turnRight();
         }
     }
