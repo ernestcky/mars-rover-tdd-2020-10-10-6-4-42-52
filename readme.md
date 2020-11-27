@@ -1,3 +1,7 @@
+# Context Map
+![alt text](https://github.com/ernestcky/mars-rover-tdd-2020-10-10-6-4-42-52/blob/master/rover.png)
+
+
 # Mars Rover
 
 Imagine you are in charge of software development on the Mars exploration team. Now you have to write a control program for the exploration vehicle landing on Mars, and control the actions of the rover according to the control instructions sent by the earth.
@@ -12,3 +16,4 @@ The instructions received by the rover fall into three categories:
      The rover can turn left 90 degrees (L) or right 90 degrees (R).
 
 Due to the long distance between the Earth and Mars, the instructions must be sent in batches. After the rover executes the complete batch of instructions, it will report its location coordinates and heading.
+
